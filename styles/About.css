@@ -1,0 +1,206 @@
+/* About.css */
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow: hidden;
+  }
+  
+  .aboutTop {
+    width: 100%;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease-in;
+    position: relative;
+  }
+  
+  .aboutTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .aboutTop h1,
+  .aboutTop p {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .aboutTop h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: slideDown 1s ease forwards;
+  }
+  
+  .aboutTop p {
+    max-width: 800px;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInText 2s ease forwards 0.8s;
+  }
+  
+  .aboutBottom {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInText {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .aboutTop h1 {
+      font-size: 2.2rem;
+    }
+  
+    .aboutTop p {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aboutTop {
+      height: 60vh;
+      padding: 0 15px;
+    }
+  
+    .aboutTop h1 {
+      font-size: 1.8rem;
+    }
+  
+    .aboutTop p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+  .aboutBottom {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px 20px 120px; /* chừa phần dưới */
+    text-align: center;
+  }
+  
+  
+  .aboutBottom h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  .founders{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột bằng nhau */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0 140px;
+  /*padding-bottom: 120px; /*tạo khoảng cách dưới cho phần founder, tránh bị footer che mất*/
+    box-sizing: border-box;
+  }
+  
+  .founderCard {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100px; /* Giới hạn chiều cao mỗi founderCard */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Căn giữa nội dung */
+  }
+  
+  .founderCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .founderCard h3 {
+    font-size: 1rem;
+    margin: 4px 0;
+    color: #333;
+  }
+  
+  .founderCard p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+  }
+  .founderAvatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid #ddd;
+    transition: opacity 0.3s ease;/*Hiệu ứng mờ khi hover*/
+  }
+  
+  
+  /* Responsive: 2 cột khi màn hình nhỏ */
+  @media (max-width: 768px) {
+    .founders {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 1 cột khi rất nhỏ */
+  @media (max-width: 480px) {
+    .founders {
+      grid-template-columns: 1fr;
+    }
+  }
+   

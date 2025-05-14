@@ -1,0 +1,188 @@
+/*Container chính cho trang home*/
+.home { 
+    width: 100px;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans M  T', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 120px;
+}
+/*Khung chứa tiêu đề và nút, đẩy phần nội dung sang phải 50px*/
+/*.headerContainer {
+  width: 100%;      /* Chiều rộng bằng 100% khung nhìn */
+ /* height: 90vh;     /* Chiều cao bằng 100% khung nhìn */
+  /*object-fit: cover; /* Phóng to ảnh để lấp đầy khung mà không bị méo */
+  /*display: block;    /* Loại bỏ khoảng trắng dưới ảnh */
+/*}*/
+
+
+.headerContainer {
+    width: 1300%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+/*Tiêu đề lớn, trắng*/
+.headerContainer h1{
+    font-size: 90px;
+    height: 60px;
+    font-weight: lighter;
+    color: rgb(244, 241, 241);
+}
+.headerContainer p{
+    padding: 0;
+    font-size: 40px;
+    font-weight: lighter;
+    color: rgb(190, 220, 17);
+}
+.headerContainer button{
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: #121619;
+    height: 50px;
+    width: 180px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.headerContainer button:hover{
+    background-color: #07090a;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+@media only screen and (max-width: 650px) {
+    .home{ justify-content: center;
+        align-items: center;
+    }   
+    .headerContainer{
+        margin-left: 0px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #121619;
+        color: white;
+    } 
+    .headerContainer h1{
+        font-size: 40px;
+        height: 30px;
+        color:white;
+    }
+    .headerContainer p{
+        font-size: 30px;
+        color:white;
+    }
+    .headerContainer button{
+        background-color: white;
+        color:#121619;
+        margin-bottom: 30px;
+    }   
+    .headerContainer button:hover{
+        background-color: rgb(225, 225, 225);
+        color:#121619;
+    }
+}
+
+.headerContainer h1 {
+    font-size: 60px;
+}
+
+.headerContainer p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.headerContainer button {
+    padding: 10px 20px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.featuredEvents {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.featuredEvents h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.eventRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.eventCard {
+    min-width: 250px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.eventCard:hover {
+    transform: scale(1.03);
+}
+
+.eventCard img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.eventCard h3 {
+    margin: 10px 0 5px;
+}
+
+.eventCard p {
+    margin: 5px 0;
+}
+
+.eventCard button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff5757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.eventCard button:hover {
+    background-color: #e64747;
+}
