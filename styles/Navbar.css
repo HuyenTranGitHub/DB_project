@@ -94,7 +94,88 @@
     }
 }
 
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+.navbar span {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /*Cho phần Login và logout*/
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+.navbar span {
+    color: white;
+    font-weight: bold;
+  }
+.logout-btn {
+    display: inline-block !important;
+    background-color: #f44336 !important; /* đỏ tươi */
+    color: white !important;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  
+.logout-btn:hover {
+    background-color: white;
+    color: #333;
+  }
+  
 
-
-
-
+/*dropdown cho phần user-name*/  
+.user-menu {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .user-email {
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 10px;
+    background-color: transparent;
+    border-radius: 4px;
+  }
+  
+.user-email:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 160px;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  }
+  
+.dropdown-menu div {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+.dropdown-menu div:hover {
+    background-color: #f1f1f1;
+  }
